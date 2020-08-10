@@ -29,7 +29,7 @@ var plotly = (data, layout) => {
   let plotlyVersion = (this.version !== null) ? '@'+this.version : '';
 
   // Generate CDN path
-  let plotlyCdnSource = `${CDN_PATH}${$plotlyVersion}/lib/index.min.js`;
+  let plotlyCdnSource = `${CDN_PATH}${plotlyVersion}/lib/index.min.js`;
 
 
   // Print 
