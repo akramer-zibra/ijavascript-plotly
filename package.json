@@ -1,6 +1,6 @@
 {
   "name": "ijavascript-plotly",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "This package integrates plotly.js into jupyter nodejs kernel",
   "main": "index.js",
   "scripts": {
