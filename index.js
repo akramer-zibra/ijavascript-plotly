@@ -68,7 +68,7 @@ var plot = (data, layout) => {
  */
 module.exports = () => {
   return {
-    version: null,
+    version: null, // Null means latest version from CDN
     dependency,
     plot
   }
