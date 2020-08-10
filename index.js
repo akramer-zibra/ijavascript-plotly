@@ -30,7 +30,7 @@ var plot = (data, layout) => {
   let plotlyVersion = (this.version !== null) ? '@'+this.version : '';
 
   // Generate CDN path
-  let plotlyCdnSource = `${CDN_PATH}${plotlyVersion}/lib/index.min.js`;
+  let plotlyLibSource = `${CDN_PATH}${plotlyVersion}/lib/index.min.js`;
 
   // Use timestamp create a unique script identifier
   const timestamp = new Date().getTime();
@@ -45,13 +45,13 @@ var plot = (data, layout) => {
       } if(window.Plotly){ plot${timestamp}(); } else if(!window.require) {
         var head = document.head || document.getElementsByTagName(\'head\')[0];
         var s = document.createElement(\'script\');
-        s.src = '${plotlyCdnSource}';
+        s.src = '${plotlyLibSource}';
         s.type = 'text/javascript';
         s.async = false;
         s.onreadystatechange = s.onload = plot${timestamp};
         head.appendChild(s);
       }else{
-        require(['${plotlyCdnSource}'], function(Plotly){
+        require(['${plotlyLibSource}'], function(Plotly){
           window.Plotly = Plotly;
           plot${timestamp}();
         });
