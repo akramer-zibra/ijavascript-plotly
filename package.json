@@ -1,0 +1,15 @@
+{
+  "name": "ijavascript-plotly",
+  "version": "1.0.0",
+  "description": "This package integrates plotly.js into jupyter nodejs kernel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jupyter",
+    "ijavascript"
+  ],
+  "author": "Achim Kramer <achim@zibra.de>",
+  "license": "MIT"
+}
