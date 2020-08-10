@@ -18,12 +18,13 @@ var dependency = (version) => {
 }
 
 /**
- * Method prints given data and layout information into a jupyter HTML box
+ * Method plots given data and layout information into a jupyter HTML box
+ * with plotly js library
  * @param {*} data 
  * @param {*} layout 
  * @returns this object for chaining
  */
-var plotly = (data, layout) => {
+var plot = (data, layout) => {
 
   // Retrieve certain plotly version 
   let plotlyVersion = (this.version !== null) ? '@'+this.version : '';
@@ -34,7 +35,7 @@ var plotly = (data, layout) => {
   // Use timestamp create a unique script identifier
   const timestamp = new Date().getTime();
 
-  // Print 
+  // Print html
   $$.html(`
   <div class="plotly-plot">
     <div id="notebook-plot-${timestamp}"></div>
@@ -69,6 +70,6 @@ module.exports = () => {
   return {
     version: null,
     dependency,
-    plotly
+    plot
   }
 }
