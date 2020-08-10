@@ -31,6 +31,8 @@ var plotly = (data, layout) => {
   // Generate CDN path
   let plotlyCdnSource = `${CDN_PATH}${plotlyVersion}/lib/index.min.js`;
 
+  // Use timestamp create a unique script identifier
+  const timestamp = new Date().getTime();
 
   // Print 
   $$.html(`
