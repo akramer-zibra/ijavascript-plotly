@@ -27,7 +27,7 @@ var dependency = (version) => {
 var plot = (data, layout) => {
 
   // Retrieve certain plotly version 
-  let plotlyVersion = (this.version !== null) ? '@'+this.version : '';
+  let plotlyVersion = (this.version !== null || this.version !== undefined) ? '@'+this.version : '';
 
   // Generate CDN path
   let plotlyLibSource = `${CDN_PATH}${plotlyVersion}/lib/index.min.js`;
